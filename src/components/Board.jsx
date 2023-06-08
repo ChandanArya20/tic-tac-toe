@@ -40,14 +40,22 @@ function Board(){
     const resetHanler=()=>{
         setState(Array(9).fill(null))
     }
+    const checkDraw=()=>{
+        if(!state.includes(null) && !isWinner)
+            return true
+        else
+            return false
+    }
+
 
     return(
         <>
         <Header headerName='Tic Tac Toe Game' />
         <div className="board-container">
-            { isWinner?<h4 style={{textAlign:'center'}}>Player {isWinner} won the game <button onClick={resetHanler}> Play Again</button></h4>:
+            { isWinner?<h4 style={{textAlign:'center',color:'green'}}>Player {isWinner} won the game <button className="playAgainBtn" onClick={resetHanler}> Play Again</button></h4>:
+            checkDraw()?<h4 style={{textAlign:'center',color:'red'}}>Noone won the game, Match draw... <button className="tryAgainBtn" onClick={resetHanler}> Play Again</button></h4>:
             <>
-            <h4 style={{textAlign:'center'}}>It's player {isXTurn?'X':'0'} turn</h4>
+            <h4 style={{textAlign:'center', color:'#200389'}}>It's player {isXTurn?'X':'0'} turn</h4>
             <div className="board-row">
                 <Square value={state[0]} onClick={()=>onClickHandler(0)}/>
                 <Square value={state[1]} onClick={()=>onClickHandler(1)}/>

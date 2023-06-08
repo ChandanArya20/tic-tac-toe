@@ -15,5 +15,42 @@
   justify-content: center;
   align-items: center;
   font-size: 20px;
-
+  cursor: pointer;
+  background-color: rgb(208, 247, 234);
+}
+.square:hover{
+  background-color: rgb(158, 241, 201);
+}
+.playAgainBtn{
+  margin-top: 20px;
+  margin-left: 5px;
+  background-color: #039944;
+  color: #ffffff;
+  padding: 8px 13px 8px 13px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition-duration: 300ms;
+}
+.playAgainBtn:hover{
+  background-color: #067230;
+  color: #ffffff;
+  cursor: pointer;
+}
+.tryAgainBtn{
+  margin-top: 20px;
+  margin-left: 5px;
+  background-color: red;
+  color: #ffffff;
+  padding: 8px 13px 8px 13px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition-duration: 300ms;
+}
+.tryAgainBtn:hover{
+  background-color: rgb(170, 10, 10);
+  cursor: pointer;
 }
